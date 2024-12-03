@@ -1,3 +1,6 @@
+/* Bluetoothデバイスのスキャン結果をタイル状に表示するためのウィジェット  */
+
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';

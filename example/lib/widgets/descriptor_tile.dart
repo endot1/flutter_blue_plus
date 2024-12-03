@@ -1,3 +1,6 @@
+/* Bluetoothデバイスの特性（Descriptor）に関する情報を表示し、操作するためのウィジェット */
+
+
 import 'dart:async';
 import 'dart:math';
 

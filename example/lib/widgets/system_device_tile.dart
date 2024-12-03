@@ -1,3 +1,6 @@
+/* Flutterアプリ内でBluetoothデバイスを表示し、接続や開く操作を可能にするためのウィジェット */
+
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';

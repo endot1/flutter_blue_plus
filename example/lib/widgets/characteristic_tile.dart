@@ -1,3 +1,6 @@
+/* BLEデバイスの特性 (Characteristic) を操作するためのウィジェット */
+
+
 import 'dart:async';
 import 'dart:math';
 

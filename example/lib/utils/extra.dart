@@ -1,5 +1,9 @@
-import 'utils.dart';
+/* BLE接続関連の汎用関数群 */
 
+
+import 'utils.dart';
+import 'dart:async';
+import "dart:io";
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
 final Map<DeviceIdentifier, StreamControllerReemit<bool>> _cglobal = {};
@@ -33,7 +37,12 @@ extension Extra on BluetoothDevice {
   Future<void> connectAndUpdateStream() async {
     _cstream.add(true);
     try {
-      await connect(mtu: null);
+      //final String remoteId = await File('/remoteId.txt').readAsString();
+      //var device = BluetoothDevice.fromId(remoteId);
+      //var device = BluetoothDevice.fromId('448C3BD4-72A8-638E-3C90-D784995EF42F');
+      await connect(autoConnect:true, mtu: null);
+      //await device.connectionState.where((val) => val == BluetoothConnectionState.connected).first;    // autoConnectで追記した内容
+      
     } finally {
       _cstream.add(false);
     }
